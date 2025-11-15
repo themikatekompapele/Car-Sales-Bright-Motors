@@ -135,7 +135,7 @@ ORDER BY profit_margin DESC;
 
 --Query for car price categorization
 
-SELECT sale_id, make, model, selling_price,
+SELECT make, model, count(sale_id) AS total_units_bought,selling_price,
 CASE 
     WHEN selling_price < 25000 THEN 'Budget (<$25K)'
     WHEN selling_price BETWEEN 25000 AND 45000 THEN 'Mid-range ($25K-$45K)'
@@ -145,3 +145,4 @@ CASE
 FROM car_analysis
 GROUP BY ALL
 ORDER BY selling_price DESC;
+
