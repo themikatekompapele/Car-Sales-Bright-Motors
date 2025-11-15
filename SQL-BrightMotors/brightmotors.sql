@@ -146,3 +146,16 @@ FROM car_analysis
 GROUP BY ALL
 ORDER BY selling_price DESC;
 
+--Query for car mileage categorization
+SELECT year,make, model, count(sale_id) AS total_units_bought,mileage,
+CASE
+ WHEN mileage < 10000 THEN 'Low (<10K)'
+ WHEN mileage BETWEEN 10000 AND 50000 THEN 'Medium (10K-50K)'
+ WHEN mileage BETWEEN 50000 AND 100000 THEN 'High (50K-100K)'
+ ELSE 'Very High (>100K)'
+ END AS mileage_category
+FROM car_analysis
+GROUP BY ALL 
+ORDER BY mileage DESC;
+
+
