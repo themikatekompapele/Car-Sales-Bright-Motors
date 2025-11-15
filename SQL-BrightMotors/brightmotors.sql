@@ -132,3 +132,16 @@ year(sale_date) AS sale_year, monthname(sale_date) AS sale_month
 FROM car_analysis
 GROUP BY state, make, sale_year, sale_month
 ORDER BY profit_margin DESC;
+
+--Query for car price categorization
+
+SELECT sale_id, make, model, selling_price,
+CASE 
+    WHEN selling_price < 25000 THEN 'Budget (<$25K)'
+    WHEN selling_price BETWEEN 25000 AND 45000 THEN 'Mid-range ($25K-$45K)'
+    WHEN selling_price BETWEEN 45000 AND 75000 THEN 'Premium ($45K-$75K)'
+    ELSE 'Luxury (>$75K)'
+  END AS price_category
+FROM car_analysis
+GROUP BY ALL
+ORDER BY selling_price DESC;
