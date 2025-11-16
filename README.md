@@ -18,3 +18,8 @@ Analysis of Bright Motors historical data to draw insights useful for advise new
 
 # Key Strategic Recommendations
 Dealerships ought to focus on transparency - provide clear, upfront communication on all pricing, financing options, and fees. This builds trust, which is the foundation of brand loyalty and repeat business to improve profitability and efficiency. Imperative,is the rapid implementation of a Seamless Omnichannel Experience, thus harmonizing online and in-store processes. This allows customers to complete steps like vehicle research, trade-in valuations, credit applications, and even price negotiation online. This speeds up the in-store process, reducing the time customers spend at the dealership—a major source of dissatisfaction.
+
+# Tech Stack
+- MS Excel (Pivot Tables and Charts)
+- Databricks (SQL)
+- PPT Presentations
